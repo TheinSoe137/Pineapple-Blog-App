@@ -1,0 +1,26 @@
+.about-card {
+   border-radius: 20px;
+    text-align: center;
+}
+
+.card-title {
+    
+display: block;
+    width: 100%;
+    
+    padding-top:20px;
+}
+
+.illustration  {
+   
+    width: 200px;
+    height: 200px;
+ 
+}
+
+.description {
+ 
+  
+    text-align: center;
+    padding-bottom: 20px;
+}
