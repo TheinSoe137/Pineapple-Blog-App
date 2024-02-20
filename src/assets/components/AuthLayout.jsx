@@ -7,17 +7,10 @@ export default function Protected({ children, authentication = true }) {
   const [loading, setLoading] = useState(true);
   const authStatus = useSelector((state) => state.auth.status);
   useEffect(() => {
-    // if (authStatus === false) {
-    //   navigate("/login");
-    //   console.log("nav from authlayout to login");
-    // }
-    // setLoading(false);
     if (authentication && authStatus !== authentication) {
       navigate("/login");
-      console.log("nav from authlayout to login");
     } else if (!authentication && authStatus !== authentication) {
       navigate("/");
-      console.log("navigate from authlayout is called to blank");
     }
     setLoading(false);
   }, [authStatus, navigate, authentication]);
