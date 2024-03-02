@@ -38,6 +38,7 @@ function Login() {
           label="Email"
           placeholder="Enter Email"
           type="email"
+          initialValue="demo@demo.com"
           {...register("email", {
             required: true,
             validate: {
@@ -51,6 +52,7 @@ function Login() {
           label="Password"
           type="password"
           placeholder="Enter Password"
+          initialValue="12345678"
           {...register("password", {
             required: true,
           })}

@@ -1,7 +1,7 @@
 import React, { useId } from "react";
 
 const Input = React.forwardRef(
-  ({ label, type = "text", className = "", ...props }, ref) => {
+  ({ label, type = "text", className = "", initialValue, ...props }, ref) => {
     const id = useId();
     return (
       <div className="input-box">
@@ -10,7 +10,14 @@ const Input = React.forwardRef(
             {label}
           </label>
         )}
-        <input type={type} className id={id} {...props} ref={ref} />
+        <input
+          type={type}
+          className
+          id={id}
+          value={initialValue}
+          {...props}
+          ref={ref}
+        />
       </div>
     );
   }
